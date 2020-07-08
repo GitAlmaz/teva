@@ -1,0 +1,14 @@
+.client-card {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #fff;
+	padding: 10px 15px;
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+	@include media($sm) {
+		padding: 10px;
+	}
+}

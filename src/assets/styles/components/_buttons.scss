@@ -1,0 +1,139 @@
+.btn {
+	font-family: $font-primary-regular;
+	font-weight: normal;
+	font-style: normal;
+	outline: none !important;
+	transition: color $transition-primary;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	&--main {
+		border-radius: 55px;
+		background-color: $cl-magenta;
+		font-size: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 19px 30px;
+		color: #fff;
+		position: relative;
+		overflow: hidden;
+		&::before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background: linear-gradient(43.76deg, #00a03b 12.01%, #afcb37 80.03%);
+			left: 0;
+			top: 0;
+			opacity: 0;
+			transition: $transition-primary;
+			z-index: 0;
+			border-radius: 55px;
+		}
+		&:hover {
+			&::before {
+				opacity: 1;
+			}
+			span {
+				transform: translateX(10px);
+			}
+			@include media($sm) {
+				&::before {
+					opacity: 0;
+				}
+				span {
+					transform: translateX(0);
+				}
+				&:active {
+					&::before {
+						opacity: 1;
+					}
+					span {
+						transform: translateX(10px);
+					}
+				}
+			}
+		}
+		&__inner {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 1;
+		}
+		span {
+			width: 29px;
+			height: 12px;
+			margin-bottom: -3px;
+			margin-left: 15px;
+			transition: $transition-primary;
+			display: flex;
+			img,
+			svg {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				fill: #fff;
+				stroke: #fff;
+				transition: $transition-primary;
+			}
+		}
+	}
+	&--empty {
+		background: transparent;
+		border: 1px solid $cl-green;
+		padding: 15px 30px;
+		@include media($sm) {
+			padding: 12px 15px;
+		}
+		p {
+			color: $cl-green;
+			@include media($sm) {
+				font-size: 13px;
+				white-space: nowrap;
+			}
+		}
+		span {
+			@include media($sm) {
+				margin-left: 5px;
+				width: 20px;
+			}
+			svg {
+				fill: $cl-green;
+				stroke: $cl-green;
+			}
+		}
+		&:hover {
+			border: 1px solid transparent;
+			p {
+				color: #fff;
+			}
+			span {
+				svg {
+					fill: #fff;
+					stroke: #fff;
+				}
+			}
+		}
+	}
+	&--navigation {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px 26px;
+		color: #fff;
+		transition: $transition-primary;
+		&:hover {
+			filter: brightness(80%);
+		}
+	}
+
+	&:active {
+		box-shadow: none;
+	}
+
+	&:hover,
+	&:active {
+		transition: none;
+	}
+}

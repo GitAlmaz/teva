@@ -1,0 +1,15 @@
+.poll {
+	padding: 80px 0;
+	.flex {
+		justify-content: space-between;
+		.card-layout {
+			margin-bottom: 40px;
+		}
+	}
+	&__col {
+		width: 49%;
+		@include media($md) {
+			width: 100%;
+		}
+	}
+}

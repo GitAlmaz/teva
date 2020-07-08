@@ -1,0 +1,20 @@
+.header {
+    padding: 20px 0;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__agree {
+        font-size: 24px;
+        color: $cl-blue;
+        font-weight: 300;
+        margin-left: auto;
+        @include media($sm) {
+            font-size: 13px;
+            width: 50%;
+            text-align: right;
+        }
+    }
+}
+

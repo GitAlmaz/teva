@@ -1,0 +1,29 @@
+.small-card {
+	width: 283px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	position: relative;
+	background: #fff;
+	padding: 30px 25px 22px 25px;
+	@include media($sm) {
+		width: 100%;
+	}
+	&__title {
+		font-size: 13px;
+		color: $cl-blue;
+		margin-bottom: 15px;
+	}
+	&__icon {
+		width: 35px;
+		height: 35px;
+		position: absolute;
+		top: 0;
+		left: 40px;
+		transform: translateY(-50%) translateX(-50%);
+		object-fit: contain;
+		@include media($sm) {
+			left: 35px;
+		}
+	}
+}

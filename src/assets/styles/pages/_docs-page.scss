@@ -1,0 +1,43 @@
+.docs-page {
+	padding: 50px 0;
+	position: relative;
+	&::after {
+		content: '';
+		width: 470px;
+		height: 470px;
+		position: absolute;
+		right: 10%;
+		top: 20%;
+		background: url('~@/assets/img/circle-dots.svg') no-repeat center;
+		background-size: contain;
+		z-index: 0;
+		@include media($smd) {
+			display: none;
+		}
+	}
+	.container {
+		position: relative;
+		z-index: 1;
+	}
+	p.text--sm-bold,
+	p.text--small {
+		width: 100%;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 10px 0;
+		li {
+			font-size: 15px;
+			color: $cl-blue;
+			padding-left: 20px;
+			&:first-child {
+				padding-left: 0;
+				margin-bottom: 5px;
+			}
+		}
+	}
+}

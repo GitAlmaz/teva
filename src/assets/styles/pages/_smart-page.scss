@@ -1,0 +1,41 @@
+.smart-page {
+	padding-top: 50px;
+	padding-bottom: 170px;
+	position: relative;
+	background: $cl-bg;
+	@include media($smd) {
+		padding-bottom: 90px;
+	}
+	&::after {
+		content: '';
+		width: 300px;
+		height: 300px;
+		position: absolute;
+		bottom: 83px;
+		left: 250px;
+		background: url('~@/assets/img/circle-lines.svg') no-repeat center;
+		background-size: contain;
+		z-index: 0;
+		@include media($smd) {
+			display: none;
+		}
+	}
+	&::before {
+		content: '';
+		width: 302px;
+		height: 341px;
+		background: url('~@/assets/img/right-bottom-triangle.svg') no-repeat center;
+		background-size: cover;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		@include media($smd) {
+			width: 101px;
+			height: 114px;
+		}
+	}
+	.container {
+		position: relative;
+		z-index: 2;
+	}
+}

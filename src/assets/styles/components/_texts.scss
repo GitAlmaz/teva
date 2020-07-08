@@ -1,0 +1,32 @@
+.text {
+	&--regular {
+		font-size: 21px;
+		color: $cl-teal;
+	}
+	&--small {
+		font-size: 15px;
+		color: $cl-teal;
+		font-weight: 300;
+		span,
+		a {
+			color: inherit;
+			font-size: inherit;
+		}
+	}
+	&--sm-bold {
+		font-size: 15px;
+		color: $cl-teal;
+		font-weight: bold;
+	}
+	&--cl {
+		&-green {
+			font-size: inherit;
+			color: $cl-green!important;
+		}
+	}
+}
+a.text--cl-green {
+	&:hover {
+		border-bottom: 1px solid $cl-green;
+	}
+}

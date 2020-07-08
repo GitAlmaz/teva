@@ -1,0 +1,33 @@
+.title--primary {
+	font-family: $font-primary-regular;
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.title--secondary {
+	font-family: $font-primary-regular;
+	font-size: 20px;
+	line-height: 26px;
+	font-weight: normal;
+	font-style: normal;
+}
+.title--account {
+	font-family: $font-primary-regular;
+	font-size: 31px;
+	color: $cl-green;
+	display: flex;
+	align-items: center;
+	font-weight: 300;
+	@include media($sm) {
+		font-size: 20px;
+	}
+	&::before {
+		content: '';
+		width: 41px;
+		height: 2px;
+		background: $cl-green;
+		margin-right: 20px;
+	}
+}

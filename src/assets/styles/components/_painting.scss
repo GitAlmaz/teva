@@ -1,0 +1,35 @@
+.painting {
+	height: 100%;
+	padding: 50px 0;
+	.container {
+		height: 920px;
+		position: relative;
+		@include media($small) {
+			height: 400px;
+		}
+	}
+	&__reset {
+		font-size: 18px;
+		margin-bottom: 25px;
+		position: absolute;
+		left: 0;
+		top: -30px;
+		opacity: .6;
+		cursor: pointer;
+		transition: .2s;
+		&:hover {
+			opacity: 1;
+		}
+		@include media($small) {
+			left: 15px;
+		}
+	}
+	canvas {
+		background: #fff;
+	}
+}
+.fullHeight {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}

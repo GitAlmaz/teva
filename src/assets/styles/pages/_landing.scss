@@ -1,0 +1,114 @@
+.landing {
+	background: $cl-bg;
+	&-data {
+		padding: 15px 0 50px 0;
+		position: relative;
+		&::before {
+			content: '';
+			width: 380px;
+			height: 380px;
+			position: absolute;
+			top: 153px;
+			right: 250px;
+			background: url('~@/assets/img/circle-lines.svg') no-repeat center;
+			background-size: contain;
+			z-index: 0;
+			@include media($smd) {
+				display: none;
+			}
+		}
+		&::after {
+			content: '';
+			width: 470px;
+			height: 470px;
+			position: absolute;
+			left: 153px;
+			bottom: 250px;
+			background: url('~@/assets/img/circle-dots.svg') no-repeat center;
+			background-size: contain;
+			z-index: 0;
+			@include media($smd) {
+				display: none;
+			}
+		}
+		.container {
+			z-index: 2;
+			position: relative;
+		}
+		h3 {
+			color: $cl-blue;
+			font-size: 20px;
+			margin: 0 0 30px auto;
+			text-align: right;
+			@include media($small) {
+				font-size: 13px;
+			}
+		}
+		.card-layout {
+			&:not(:last-of-type) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+	&-info {
+		padding-bottom: 115px;
+		position: relative;
+		&::before {
+			// content: '';
+			width: 302px;
+			height: 341px;
+			background: url('~@/assets/img/right-bottom-triangle.svg') no-repeat center;
+			background-size: cover;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			@include media($smd) {
+				width: 101px;
+				height: 114px;
+			}
+		}
+		.container {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			position: relative;
+			z-index: 2;
+			@include media($slg) {
+				justify-content: flex-start;
+			}
+			@include media($smd) {
+				flex-wrap: wrap;
+			}
+		}
+		.btn--main {
+			flex-shrink: 0;
+			@include media($slg) {
+				margin-right: 30px;
+			}
+			@include media($smd) {
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
+		}
+		&__text {
+			width: 740px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			@include media($slg) {
+				width: 65%;
+			}
+			@include media($smd) {
+				width: 100%;
+			}
+			p {
+				font-size: 10px;
+				color: $cl-teal;
+				width: 100%;
+				&:not(:last-child) {
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+}

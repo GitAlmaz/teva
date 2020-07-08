@@ -1,0 +1,107 @@
+.footer {
+	padding: 45px 0;
+	overflow: hidden;
+	&--account {
+		background: $cl-bg;
+	}
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		position: relative;
+	}
+	a.text--small,
+	p.text--small,
+	a.text--sm-bold {
+		color: #8f8d8d;
+	}
+	a.text--small,
+	a.text--sm-bold {
+		&:hover {
+			text-decoration: underline;
+			text-decoration-color: #8f8d8d;
+		}
+	}
+	&__row {
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		&:not(:last-of-type) {
+			margin-bottom: 20px;
+		}
+	}
+	&__col {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 30%;
+		@include media($small) {
+			width: 100%;
+		}
+		a.text--sm-bold {
+			&:last-of-type {
+				margin-bottom: 30px;
+			}
+		}
+		a.text--small,
+		p.text--small {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+			a {
+				color: $cl-green;
+				text-decoration: underline;
+			}
+		}
+	}
+	&__small-row {
+		display: flex;
+		align-items: flex-start;
+	}
+	&__article {
+		color: #c1c1c1;
+		font-size: 13px;
+	}
+	&__rocket-logo {
+		display: flex;
+		align-items: center;
+		// position: absolute;
+		// left: 50%;
+		// bottom: 0;
+		// transform: translateX(-50%);
+		// @include media($smd) {
+		// 	transform: translateX(0);
+		// 	position: relative;
+		// 	left: auto;
+		// }
+		img {
+			width: 194px;
+			height: 27px;
+			margin-right: 20px;
+		}
+		p {
+			font-size: 12px;
+			padding: 0 10px;
+			border-radius: 1px;
+			border: 1px solid $cl-teal;
+			color: $cl-teal;
+		}
+	}
+	&__slogan {
+		text-transform: uppercase;
+		position: relative;
+		padding-top: 5px;
+		&::before {
+			content: '';
+			width: 60vw;
+			height: 1px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: $cl-blue;
+		}
+	}
+}

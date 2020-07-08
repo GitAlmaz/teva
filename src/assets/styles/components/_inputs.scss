@@ -1,0 +1,52 @@
+input {
+	width: 100%;
+	color: #c1c1c1;
+	padding: 15px 22px;
+	border: 1px solid #c1c1c1;
+	border-radius: 3px;
+	outline: none;
+	box-shadow: none;
+	font-size: 15px;
+	transition: $transition-primary;
+	&:active,
+	&:focus,
+	&:hover {
+		border-color: $cl-green;
+		color: $cl-green;
+	}
+	&.error {
+		border-color: $cl-red;
+		color: $cl-red;
+	}
+	&.success {
+		border-color: $cl-green;
+		color: $cl-green;
+	}
+}
+textarea {
+	font-family: $font-primary-regular;
+	width: 100%;
+	color: #c1c1c1;
+	padding: 15px 22px;
+	border: 1px solid #c1c1c1;
+	border-radius: 3px;
+	outline: none;
+	box-shadow: none;
+	font-size: 15px;
+	transition: $transition-primary;
+	resize: none;
+	&:active,
+	&:focus,
+	&:hover {
+		border-color: $cl-green;
+		color: $cl-green;
+	}
+	&.error {
+		border-color: $cl-red;
+		color: $cl-red;
+	}
+	&.success {
+		border-color: $cl-green;
+		color: $cl-green;
+	}
+}
